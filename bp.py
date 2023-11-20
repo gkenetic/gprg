@@ -21,9 +21,21 @@ while True:
         # Get the current time
         current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 
-        # Append the data to a file
-        with open("bitcoin_prices.txt", "a") as file:
-            file.write(f"{current_time},{bitcoin_price_usd}\n")
+        # Read existing content from the file
+        with open("bitcoin_prices.txt", "r") as file:
+            lines = file.readlines()
+
+        # Check if the number of lines exceeds 1000
+        if len(lines) > 1000:
+            # Remove the first line
+            lines.pop(0)
+
+        # Append the new data to the list of lines
+        lines.append(f"{current_time},{bitcoin_price_usd}\n")
+
+        # Write the updated content back to the file
+        with open("bitcoin_prices.txt", "w") as file:
+            file.writelines(lines)
     else:
         print(f"Failed to fetch data. Status code: {response.status_code}")
 

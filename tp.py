@@ -4,6 +4,15 @@ from deap import creator, base, tools, gp, algorithms
 from functools import partial
 import random
 from datetime import datetime
+import warnings
+
+warnings.filterwarnings("ignore", message="Ephemeral rand function cannot be pickled.*")
+warnings.filterwarnings("ignore", message="overflow encountered in exp")
+warnings.filterwarnings("ignore", message="invalid value encountered in log")
+warnings.filterwarnings("ignore", message="invalid value encountered in sqrt")
+warnings.filterwarnings("ignore", message="divide by zero encountered in log")
+warnings.filterwarnings("ignore", message="invalid value encountered in sin")
+warnings.filterwarnings("ignore", message="invalid value encountered in cos")
 
 # Define the problem
 def evaluate(individual, timestamps, target_values):

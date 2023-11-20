@@ -88,7 +88,7 @@ toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
 toolbox.register("compile", gp.compile, pset=pset)
 
-data_file_path = 'bitcoin_prices.txt'
+data_file_path = '/root/gprg/bitcoin_prices.txt'
 data = parse_data(data_file_path)
 
 # Split data into training and test sets

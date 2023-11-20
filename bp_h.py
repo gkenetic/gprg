@@ -5,7 +5,7 @@ import time
 
 while True:
     # URL for Bitcoin price
-    url = "https://api.coindesk.com/v1/bpi/currentprice_h.json"
+    url = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
     # Make the HTTP request
     response = requests.get(url)
@@ -34,7 +34,7 @@ while True:
         lines.append(f"{current_time},{bitcoin_price_usd}\n")
 
         # Write the updated content back to the file
-        with open("bitcoin_prices.txt", "w") as file:
+        with open("bitcoin_prices_h.txt", "w") as file:
             file.writelines(lines)
     else:
         print(f"Failed to fetch data. Status code: {response.status_code}")

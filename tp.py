@@ -15,6 +15,7 @@ warnings.filterwarnings("ignore", message="invalid value encountered in sin")
 warnings.filterwarnings("ignore", message="invalid value encountered in cos")
 warnings.filterwarnings("ignore", message="invalid value encountered in scalar subtract")
 warnings.filterwarnings("ignore", message="divide by zero encountered in scalar divide")
+warnings.filterwarnings("ignore", message="invalid value encountered in scalar multiply")
 
 
 

@@ -146,7 +146,7 @@ def main():
             ind.fitness.values = fit
 
             # Print the individual if you want to inspect it
-            print(f"Generation {gen}, Individual: {ind}, Fitness: {fit}")
+            #print(f"Generation {gen}, Individual: {ind}, Fitness: {fit}")
 
         population = toolbox.select(offspring + population, k=len(population))
 

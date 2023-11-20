@@ -22,7 +22,7 @@ while True:
         current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 
         # Read existing content from the file
-        with open("bitcoin_prices.txt", "r") as file:
+        with open("bitcoin_prices_h.txt", "r") as file:
             lines = file.readlines()
 
         # Check if the number of lines exceeds 1000

@@ -13,6 +13,10 @@ warnings.filterwarnings("ignore", message="invalid value encountered in sqrt")
 warnings.filterwarnings("ignore", message="divide by zero encountered in log")
 warnings.filterwarnings("ignore", message="invalid value encountered in sin")
 warnings.filterwarnings("ignore", message="invalid value encountered in cos")
+warnings.filterwarnings("ignore", message="invalid value encountered in scalar subtract")
+warnings.filterwarnings("ignore", message="divide by zero encountered in scalar divide")
+
+
 
 # Define the problem
 def evaluate(individual, timestamps, target_values):

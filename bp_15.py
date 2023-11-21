@@ -26,7 +26,7 @@ while True:
             lines = file.readlines()
 
         # Check if the number of lines exceeds 1000
-        if len(lines) > 60:
+        if len(lines) > 15:
             # Remove the first line
             lines.pop(0)
 

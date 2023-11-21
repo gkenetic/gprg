@@ -147,7 +147,8 @@ toolbox.register("expr_mut", gp.genFull, min_=0, max_=2)
 toolbox.register("mutate", gp.mutUniform, expr=toolbox.expr_mut, pset=pset)
 
 def main():
-    random.seed(42)
+    random.seed(13)
+    
 
     population = toolbox.population(n=500)
     generations = 50

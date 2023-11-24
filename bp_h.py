@@ -25,7 +25,7 @@ while True:
     current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')
 
     # Read existing content from the file
-    with open("bitcoin_prices_15.txt", "r") as file:
+    with open("bitcoin_prices_h.txt", "r") as file:
         lines = file.readlines()
 
     # Check if the number of lines exceeds 1000
@@ -37,7 +37,7 @@ while True:
     lines.append(f"{current_time},{bitcoin_price_usd}\n")
 
     # Write the updated content back to the file
-    with open("bitcoin_prices_15.txt", "w") as file:
+    with open("bitcoin_prices_h.txt", "w") as file:
         file.writelines(lines)
 
     # Sleep for 60 seconds before the next iteration
